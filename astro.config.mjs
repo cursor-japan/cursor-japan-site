@@ -2,8 +2,8 @@ import starlight from "@astrojs/starlight";
 import starlightUtils from "@lorenzo_lewis/starlight-utils";
 import { defineConfig } from "astro/config";
 import starlightBlog from "starlight-blog";
+import starlightImageZoom from "starlight-image-zoom";
 // import starlightLinksValidator from 'starlight-links-validator';
-// import starlightImageZoom from 'starlight-image-zoom';
 // import starWarp from '@inox-tools/star-warp';
 
 import react from "@astrojs/react";
@@ -25,6 +25,7 @@ export default defineConfig({
     starlight({
       favicon: "/favicon.png",
       plugins: [
+        starlightImageZoom(),
         starlightBlog(),
         starlightUtils({
           navLinks: {
@@ -58,6 +59,7 @@ export default defineConfig({
       },
       components: {
         Pagination: "./src/components/CustomPagination.astro",
+        MarkdownContent: "./src/components/MarkdownContent.astro",
       },
       sidebar: [
         {
