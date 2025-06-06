@@ -1,0 +1,90 @@
+---
+import cursorJapanLogo from '../assets/cursor-japan-app-logo.svg';
+---
+
+<div class="coming-soon-container">
+  <img src={cursorJapanLogo.src} alt="Cursor Japan Logo" class="logo" />
+  <h1 class="title">Cursor Japan Community</h1>
+  <p class="subtitle">Coming Soon</p>
+  <p class="features">ドキュメントの翻訳、コミュニティTips、国内イベント情報など</p>
+</div>
+
+<style>
+  .coming-soon-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .logo {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2rem;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 0.8;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  .features {
+    color: #252525;
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.6;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      width: 150px;
+      height: 150px;
+    }
+
+    .title {
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+    }
+
+    .features {
+      font-size: 0.9rem;
+      padding: 0 1rem;
+    }
+  }
+</style> 

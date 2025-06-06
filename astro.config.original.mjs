@@ -1,14 +1,14 @@
-// import starlight from "@astrojs/starlight";
-// import starlightUtils from "@lorenzo_lewis/starlight-utils";
+import starlight from "@astrojs/starlight";
+import starlightUtils from "@lorenzo_lewis/starlight-utils";
 import { defineConfig } from "astro/config";
-// import starlightBlog from "starlight-blog";
+import starlightBlog from "starlight-blog";
 // import starlightLinksValidator from 'starlight-links-validator';
 // import starlightImageZoom from 'starlight-image-zoom';
 // import starWarp from '@inox-tools/star-warp';
 
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
-// import linkCard from "astro-link-card";
+import linkCard from "astro-link-card";
 // import webVitals from "@astrojs/web-vitals";
 // import db from "@astrojs/db";
 // import cloudflare from "@astrojs/cloudflare";
@@ -22,8 +22,6 @@ export default defineConfig({
   },
   site: "https://cursor-japan.org",
   integrations: [
-    // Temporarily comment out Starlight to show the coming soon page
-    /*
     starlight({
       favicon: "/favicon.png",
       plugins: [
@@ -93,9 +91,8 @@ export default defineConfig({
         },
       ],
     }),
-    */
     react(),
-    // linkCard(),
+    linkCard(),
     tailwind({
       applyBaseStyles: false,
     }) /*webVitals(), db()*/,
@@ -104,4 +101,4 @@ export default defineConfig({
   // adapter: cloudflare({
   //   imageService: 'cloudflare'
   // })
-});
+}); 
